@@ -41,6 +41,10 @@
 	<option value="" <?=@assinalarCampo($produto['categoria'], 'nacionais')?>>cartao de credito</option>
 	<option value="" <?=@assinalarCampo($produto['categoria'], 'hqs')?>>boleto</option>
 	<option value="" <?=@assinalarCampo($produto['categoria'], 'infantis')?>>debito</option>
-</select>
+</select><br><br><br><br>
+<a href="./pedido/finalizarPedido" class="btn btn-primary">Finalizar Compra</a>
 </center>
+<br><br>
+
+
 

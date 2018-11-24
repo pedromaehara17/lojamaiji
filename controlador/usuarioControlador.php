@@ -11,7 +11,7 @@ function index() {
 function adicionar() {
     if (ehPost()) {
         extract($_POST);
-        alert(adicionarUsuario($nome, $email, $sexo,$dia,$mes,$ano,$cpf,$cep,$rua,$telefone,$senha,$confsenha));
+        alert(adicionarUsuario($nome, $email, $sexo,$dia,$mes,$ano,$cpf,$cep,$rua,$telefone,$municipio,$estado,$senha,$confsenha));
         redirecionar("usuario/index");
     } else {
         exibir("usuario/formulario");
@@ -50,9 +50,11 @@ if($id == $usuario["id"]) {
         $cep = $_POST["cep"];
         $rua = $_POST["rua"];
         $telefone = $_POST["telefone"];
+        $municipio = $_POST["municipio"];
+        $estado = $_POST["estado"];
         $senha = $_POST["senha"];
         $confsenha = $_POST["confsenha"];
-        alert(editarUsuario($id, $nome, $email,$sexo,$dia,$mes,$ano,$cpf,$cep,$rua,$telefone,$senha,$confsenha));
+        alert(editarUsuario($id, $nome, $email,$sexo,$dia,$mes,$ano,$cpf,$cep,$rua,$telefone,$municipio,$estado,$senha,$confsenha));
         redirecionar("usuario/index");
     } else {
         $dados['usuario'] = pegarUsuarioPorId($id);

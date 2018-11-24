@@ -28,9 +28,9 @@ $senha = mysqli_real_escape_string(conn(), $senha);
     return $usuario;
 }
 
-function adicionarUsuario($nome, $email, $sexo,$dia,$mes,$ano,$cpf,$cep,$rua,$telefone,$senha,$confsenha) {
-    $sql = "INSERT INTO usuario (nome, email, sexo, dia, mes, ano, cpf, cep, rua, telefone, senha, confsenha) 
-			VALUES ('$nome', '$email', '$sexo','$dia','$mes','$ano','$cpf','$cep','$rua', '$telefone','$senha','$confsenha')";
+function adicionarUsuario($nome, $email, $sexo,$dia,$mes,$ano,$cpf,$cep,$rua,$telefone,$municipio,$estado,$senha,$confsenha) {
+    $sql = "INSERT INTO usuario (nome, email, sexo, dia, mes, ano, cpf, cep, rua, telefone, municipio, estado, senha, confsenha) 
+			VALUES ('$nome', '$email', '$sexo','$dia','$mes','$ano','$cpf','$cep','$rua', '$telefone', '$municipio', '$estado','$senha','$confsenha')";
 
 
 if ((strlen($nome) < 3)){
@@ -80,8 +80,8 @@ if (!$resultado){
 
 
 
-function editarUsuario($id, $nome, $email, $sexo,$dia,$mes,$ano,$cpf,$cep,$rua,$telefone,$senha,$confsenha) {
-    $sql = "UPDATE usuario SET nome = '$nome', email = '$email', sexo = '$sexo',dia = '$dia',mes = '$mes',ano = '$ano',cpf = '$cpf',cep = '$cep', rua = '$rua',telefone = '$telefone',senha = '$senha',confsenha = '$confsenha' WHERE id = $id";
+function editarUsuario($id, $nome, $email, $sexo,$dia,$mes,$ano,$cpf,$cep,$rua,$telefone,$municipio,$estado,$senha,$confsenha) {
+    $sql = "UPDATE usuario SET nome = '$nome', email = '$email', sexo = '$sexo',dia = '$dia',mes = '$mes',ano = '$ano',cpf = '$cpf',cep = '$cep', rua = '$rua',telefone = '$telefone', municipio ='$municipio', estado = '$estado', senha = '$senha',confsenha = '$confsenha' WHERE id = $id";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado) { die('Erro ao alterar usuário' . mysqli_error($cnx)); }
     return 'Usuário alterado com sucesso!';

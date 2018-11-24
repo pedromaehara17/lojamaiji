@@ -1,3 +1,6 @@
+<head>
+<meta charset="UTF-8">
+</head>
 <style>
 #txtBusca{
 	  border-radius: 8px;
@@ -34,6 +37,7 @@
 
              <li class="nav-item"><a href="./produto" class="nav-link">Todos os Produtos</a></li> 
              <li class="nav-item"><a href="./cupom" class="nav-link">Cupom</a></li> 
+              <li class="nav-item"><a href="./administrador" class="nav-link">Relatórios</a></li>
           
             <?php endif ; ?>
 
@@ -44,6 +48,7 @@
               ?>
              <li class="nav-item"><a href="./usuario" class="nav-link">Usuario</a></li> 
              <li class="nav-item"><a href="./carrinho/" class="nav-link">Carrinho</a></li> 
+              <li class="nav-item"><a href="./pedido/index" class="nav-link">Meus Pedidos</a></li> 
            <?php else : ?>
              
             <?php endif ; ?>

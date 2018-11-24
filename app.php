@@ -11,4 +11,4 @@ require_once 'bibliotecas/alert.php';
 require_once 'bibliotecas/auth.php';
 
 define('CONTROLADOR_PADRAO', 'paginas');
-define('BASE_URL', 'http://localhost/pedromaehara/');
+define('BASE_URL', 'http://localhost/lojamaiji/');

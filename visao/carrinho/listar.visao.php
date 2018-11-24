@@ -1,3 +1,7 @@
+<head>
+
+<meta charset="UTF-8">
+</head>
 <?php
 
 $total = 0;
@@ -38,7 +42,9 @@ $totalprodutos = 0;
             <td><?=$produto['nomeproduto']?></td>
             <td><?=$produto['descricao']?></td>
             <td><?=$quantidade * $produto["preco"]?></td>
-            <td><?=$quantidade?></td>
+<td><a href="./carrinho/adicionarQuantidade/<?=$produto['idproduto']?>"><img src="./publico/imagens/cima.jpg" height=20px>
+</a><?=$quantidade?>      <a href="./carrinho/diminuirQuantidade/<?=$produto['idproduto']?>"><img src="./publico/imagens/baixo.jpg" height=20px>
+</a></td>
             <td><a href="./carrinho/deletar/<?=$produto['idproduto']?>">excluir</a></td>
         </tr>
 

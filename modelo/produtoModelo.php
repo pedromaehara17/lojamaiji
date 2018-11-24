@@ -112,4 +112,14 @@ function infantis() {
     }
     return $produtos;  
 }
+
+
+function atualizarEstoque ($id,$estoque_atual,$quantidade_comprada) {
+    $estoque_atual = $estoque_atual - $quantidade_comprada;
+    $sql = "UPDATE produto SET idproduto = '$id', quantidade = $estoque_atual WHERE idproduto = '$id'";
+    $resultado = mysqli_query($cnx = conn(), $sql);
+    if (!$resultado) {
+        echo "Erro ao atualizar estoque ".mysqli_error($cnx);
+    }
+}
 		?>

@@ -8,5 +8,7 @@
 <?=$usuario['mes']?> / 
 <?=$usuario['ano']?></p>
 <p>cpf: <?=$usuario['cpf']?></p>
-<p>cpf: <?=$usuario['cep']?></p>
+<p>cep: <?=$usuario['cep']?></p>
 <p>telefone: <?=$usuario['telefone']?></p>
+<p>municipio: <?=$usuario['municipio']?></p>
+<p>estado: <?=$usuario['estado']?></p>

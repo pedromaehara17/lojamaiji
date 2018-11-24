@@ -91,3 +91,29 @@ function limparSessao() {
     unset($_SESSION["carrinho"]);
 }
 
+function adicionarQuantidade($id){
+for($i=0; $i< count($_SESSION["carrinho"]);$i++){
+    if($_SESSION["carrinho"][$i]["id"]==$id){
+        $_SESSION["carrinho"][$i]["quantidade"]+=1;
+    }
+
+}
+redirecionar("carrinho/index");
+}
+
+
+function diminuirQuantidade($id){
+for($i=0; $i< count($_SESSION["carrinho"]);$i++){
+    if($_SESSION["carrinho"][$i]["id"]==$id){
+        $_SESSION["carrinho"][$i]["quantidade"]-=1;
+    if($_SESSION["carrinho"][$i]["quantidade"]==0){
+        unset($_SESSION["carrinho"][$i]);
+
+        $_SESSION["carrinho"]=array_values($_SESSION["carrinho"]);
+        redirecionar("carrinho/index");
+    }   
+    }
+
+}
+redirecionar("carrinho/index");
+}
